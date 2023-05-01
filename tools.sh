@@ -11,6 +11,16 @@ dl_gh() {
 
 echo "All assets downloaded"
 }
+get_patches_key() {
+EXCLUDE_PATCHES=()
+for word in $(cat $1/exclude-patches) ; do
+    EXCLUDE_PATCHES+=("-e $word")
+done
+INCLUDE_PATCHES=()
+for word in $(cat $1/include-patches) ; do
+    INCLUDE_PATCHES+=("-i $word")
+done
+}
 # Function download YouTube and YouTube Music apk from APKmirror
 req() { 
     wget -nv -O "$2" -U "Mozilla/5.0 (X11; Linux x86_64; rv:111.0) Gecko/20100101 Firefox/111.0" "$1"
