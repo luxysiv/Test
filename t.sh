@@ -129,9 +129,3 @@ twversion=$(jq -r '.[] | select(.name == "block-video-ads") | .compatiblePackage
 get_tt_ver() {
 ttversion=$(jq -r '.[] | select(.name == "sim-spoof") | .compatiblePackages[] | select(.name == "com.ss.android.ugc.trill") | .versions[-1]' patches.json)
 }
-download_latest_release
-dl_mes
-get_tw_ver
-dl_twitch
-get_tt_ver
-dl_tt
