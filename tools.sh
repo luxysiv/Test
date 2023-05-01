@@ -139,3 +139,6 @@ twversion=$(jq -r '.[] | select(.name == "block-video-ads") | .compatiblePackage
 get_tt_ver() {
 ttversion=$(jq -r '.[] | select(.name == "sim-spoof") | .compatiblePackages[] | select(.name == "com.ss.android.ugc.trill") | .versions[-1]' patches.json)
 }
+patch() {
+java -jar revanced-cli*.jar -m revanced-integrations*.apk -b revanced-patches*.jar -a $1.apk ${EXCLUDE_PATCHES[@]} ${INCLUDE_PATCHES[@]} --keystore=ks.keystore -o ./build/$2.apk
+}
