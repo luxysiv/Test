@@ -60,7 +60,7 @@ dl_ytms() {
 	last_ver="${last_ver:-$(get_apk_vers "https://www.apkmirror.com/uploads/?appcategory=youtube-music" | get_largest_ver)}"
 	
 	echo "Choosing version '${last_ver}'"
-	local base_apk="youtube-music-v$ytmsversion.apk"
+	local base_apk="youtube-music.apk"
 	local regexp_arch='arm64-v8a</div>[^@]*@\([^"]*\)'
 		dl_url=$(dl_apk "https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-${last_ver//./-}-release/" \
 			"$regexp_arch" \
@@ -106,7 +106,7 @@ dl_mes() {
 	last_ver="${last_ver:-$(get_apk_vers "https://www.apkmirror.com/uploads/?appcategory=messenger" | get_largest_ver)}"
 	
 	echo "Choosing version '${last_ver}'"
-	local base_apk="youtube-music-v$ytmsversion.apk"
+	local base_apk="messenger.apk"
 	local regexp_arch='arm64-v8a</div>[^@]*@\([^"]*\)'
 		dl_url=$(dl_apk "https://www.apkmirror.com/apk/facebook-2/messenger/messenger-${last_ver//./-}-release/" \
 			"$regexp_arch" \
@@ -130,7 +130,6 @@ get_tt_ver() {
 ttversion=$(jq -r '.[] | select(.name == "sim-spoof") | .compatiblePackages[] | select(.name == "com.ss.android.ugc.trill") | .versions[-1]' patches.json)
 }
 download_latest_release
-dl_ytms
 dl_mes
 get_tw_ver
 dl_twitch
