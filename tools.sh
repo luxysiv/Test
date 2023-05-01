@@ -142,4 +142,6 @@ ttversion=$(jq -r '.[] | select(.name == "sim-spoof") | .compatiblePackages[] | 
 patch() {
 if [ -f "$1.apk" ]; then
 java -jar revanced-cli*.jar -m revanced-integrations*.apk -b revanced-patches*.jar -a $1.apk ${EXCLUDE_PATCHES[@]} ${INCLUDE_PATCHES[@]} --keystore=ks.keystore -o ./build/$2.apk
+else 
+exit 1
 }
