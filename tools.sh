@@ -1,4 +1,4 @@
-download_latest_release() {
+dl_gh() {
     echo "⏬ Downloading resources..."
     for repo in revanced-patches revanced-cli revanced-integrations ; do
     asset_urls=$(wget -qO- "https://api.github.com/repos/revanced/$repo/releases/latest" | jq -r '.assets[] | "\(.browser_download_url) \(.name)"')
