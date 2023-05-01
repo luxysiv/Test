@@ -123,3 +123,15 @@ get_support_ytmsversion() {
     ytmsversion=$(jq -r '.[] | select(.name == "hide-get-premium") | .compatiblePackages[] | select(.name == "com.google.android.apps.youtube.music") | .versions[-1]' patches.json)
     echo "✅️ Found version: $ytmsversion"
 }
+get_tw_ver() {
+twversion=$(jq -r '.[] | select(.name == "block-video-ads") | .compatiblePackages[] | select(.name == "tv.twitch.android.app") | .versions[-1]' patches.json)
+}
+get_tt_ver() {
+ttversion=$(jq -r '.[] | select(.name == "sim-spoof") | .compatiblePackages[] | select(.name == "com.ss.android.ugc.trill") | .versions[-1]' patches.json)
+}
+dl_ytms
+dl_mes
+get_tw_ver
+dl_twitch
+get_tt_ver
+dl_tt
