@@ -1,7 +1,7 @@
 download_latest_release() {
-    echo "⏬ Downloading $name resources..."
+    echo "⏬ Downloading resources..."
     for repo in revanced-patches revanced-cli revanced-integrations ; do
-    asset_urls=$(wget -qO- "https://api.github.com/repos/$user/$repo/releases/latest" | jq -r '.assets[] | "\(.browser_download_url) \(.name)"')
+    asset_urls=$(wget -qO- "https://api.github.com/repos/revanced/$repo/releases/latest" | jq -r '.assets[] | "\(.browser_download_url) \(.name)"')
         while read -r url names
         do
             echo "Downloading $names from $url"
@@ -129,6 +129,7 @@ twversion=$(jq -r '.[] | select(.name == "block-video-ads") | .compatiblePackage
 get_tt_ver() {
 ttversion=$(jq -r '.[] | select(.name == "sim-spoof") | .compatiblePackages[] | select(.name == "com.ss.android.ugc.trill") | .versions[-1]' patches.json)
 }
+download_latest_release
 dl_ytms
 dl_mes
 get_tw_ver
