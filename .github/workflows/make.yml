@@ -14,3 +14,21 @@ jobs:
 
       - name: make hosts
         run: bash make.sh
+
+      - name: Generate date 
+
+        run: echo "DATE=$(date +%F)" >> $GITHUB_ENV
+
+      - name: Commit filters
+
+        uses: EndBug/add-and-commit@v9.1.1
+
+        with:
+
+          add: 'hosts.txt'
+
+          default_author: github_actor 
+
+          message: 'Cập nhật bộ lọc: ${{ env.DATE }}'
+
+          push: true
