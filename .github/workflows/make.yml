@@ -30,6 +30,6 @@ jobs:
 
           default_author: github_actor 
 
-          message: 'Cập nhật bộ lọc: ${{ env.DATE }}'
+          message: 'Update: ${{ env.DATE }}'
 
           push: true
