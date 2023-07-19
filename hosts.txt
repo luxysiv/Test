@@ -1,2 +1,3 @@
 0.0.0.0 ads.google.com
+0.0.0.0 adserver.google.com
 0.0.0.0 connect.facebook.net
