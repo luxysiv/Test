@@ -1,2 +1,2 @@
 connect.facebook.net
-ads.google.com
+adserver.google.com
