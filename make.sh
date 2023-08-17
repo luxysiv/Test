@@ -1,4 +1,5 @@
 #!/bin/bash
+rm hosts.txt
 domain_file="domain.txt"
 hosts_file="hosts.txt"
 while IFS= read -r domain; do
