@@ -6518,7 +6518,6 @@
 0.0.0.0 dco-msg.mathtag.com
 0.0.0.0 dco-pix.mathtag.com
 0.0.0.0 dco.urekamedia.com
-0.0.0.0 dcrfnt-us.adsmoloco.com
 0.0.0.0 dcyaglnhuvf.com
 0.0.0.0 dd.scanscout.com
 0.0.0.0 dd.toponad.com
@@ -13196,7 +13195,6 @@
 0.0.0.0 prod-bid.applovin.com
 0.0.0.0 prod-collecticon.outlookmobile.com
 0.0.0.0 prod-ingestion.tracking.v2.yieldlove-ad-serving.net
-0.0.0.0 prod-mediate-events.applovin.com 
 0.0.0.0 prod-ms.applovin.com
 0.0.0.0 prod-ms4.applovin.com
 0.0.0.0 prod-rtb.ad4mat.net
@@ -14765,7 +14763,6 @@
 0.0.0.0 sdk-cdn.aiactiv.io
 0.0.0.0 sdk-config.fyber.com
 0.0.0.0 sdk-events.inner-active.mobi
-0.0.0.0 sdk-events.inner-active.mobi 
 0.0.0.0 sdk-ios.ad.smaato.net
 0.0.0.0 sdk-monitoring.ogury.co
 0.0.0.0 sdk-orion.appboy.com
